@@ -1,0 +1,4 @@
+﻿  insertionSort.cpp
+D:\Git_JSH\C++_Projects\InsertionSort\InsertionSort\insertionSort.cpp(65,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+D:\Git_JSH\C++_Projects\InsertionSort\InsertionSort\insertionSort.cpp(108,6): warning C4101:  'size': unreferenced local variable
+  InsertionSort.vcxproj -> D:\Git_JSH\C++_Projects\InsertionSort\Debug\InsertionSort.exe
