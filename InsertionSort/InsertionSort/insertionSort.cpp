@@ -63,6 +63,7 @@ void displayArray(int array[], int size)
 	cout << "}";
 }
 
+// This function fills a given array with random numbers.
 void fillArray(int array[], int size)
 {
 	// Seed the randomizer
@@ -74,6 +75,7 @@ void fillArray(int array[], int size)
 	}
 }
 
+// This function performs insertion sort on a given array.
 void insertionSort(int array[], int size)
 {
 	sort(array, size);
@@ -123,6 +125,7 @@ int averageVal(int array[], int size)
 	return avg;
 }
 
+// This function finds the median value in the array.
 int medianVal(int array[], int size)
 {
 	if (size % 2)
@@ -186,7 +189,7 @@ bool isSorted(int array[], int size)
 	return true;
 }
 
-
+// Driver function
 int main()
 {
 	int size;
