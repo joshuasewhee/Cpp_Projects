@@ -2,9 +2,11 @@
  * Name: Joshua Sew-Hee
  * Date: 7/3/2019
  * Desc: Insertion Sort
- * Prob: Sort an array of any given size using insertion sort.
-		 Display the minimum, maximum and average values of the array.
-		 Detect whether an array is sorted or not, and if it is not sorted, sort it.
+ * Prob: This program asks the user for the size of the array to be created.
+		 Generates a set of random numbers in the array.
+		 Detects whether an array is sorted or not, and if it is not sorted, sort it.
+		 Sorts the array using insertion sort.
+		 Displays the minimum, maximum, average, median and mode of the array.
  */
 
 #include <cstdlib>
@@ -125,11 +127,11 @@ int medianVal(int array[], int size)
 {
 	if (size % 2)
 	{
-		return (size / 2) + 1; // If odd, n is the median
+		return array[(size / 2) + 1]; // If odd, n is the median
 	}
 	else
 	{
-		return size / 2; // if even, n + 1 is the median
+		return array[size / 2]; // if even, n + 1 is the median
 	}
 }
 
@@ -156,6 +158,9 @@ int modeVal(int array[], int size)
 			count = 1; // Reset count for new number
 			number = array[i];
 		}
+	}
+	if (counterMode == 1) {
+		mode = 0;
 	}
 	return mode;
 }
@@ -214,8 +219,13 @@ int main()
 	cout << "Max number in myArray: " << maxVal(array, size) << "\n";
 	cout << "Average number in myArray: " << averageVal(array, size) << "\n";
 	cout << "Median number in myArray: " << medianVal(array, size) << "\n";
-	cout << "Mode number in myArray: " << modeVal(array, size) << "\n";
-
+	if (modeVal(array, size)) {
+		cout << "Mode number in myArray: " << modeVal(array, size) << "\n";
+	}
+	else
+	{
+		cout << "There is no mode in myArray.\n";
+	}
 
 	return 0;
 }
